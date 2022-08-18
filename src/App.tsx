@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// Project components
+import Navbar from "./components/Navbar";
+import AllBooks from "./pages/AllBooks";
 
-function App() {
+// Pages
+import Home from "./pages/Home";
+
+// external Components
+import { Routes, Route } from "react-router-dom";
+
+// Glopal style
+import "./global/Main.css";
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container mx-auto px-5">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/all-books" element={<AllBooks />} />
+        {/* <AllBooks /> */}
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

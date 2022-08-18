@@ -1,0 +1,194 @@
+/* Start Navbar */
+.navbar {
+  position: relative;
+  @apply flex justify-between items-center h-12 gap-5 py-10;
+}
+.navbar .brand {
+  @apply flex-15;
+}
+.navbar .brand h1 {
+  @apply text-3xl font-bold font-inter;
+}
+.navbar .search {
+  @apply flex flex-70 justify-between  bg-stone-100 px-3 py-1 rounded-md;
+}
+.navbar .search input {
+  @apply flex-auto bg-transparent focus:outline-0;
+}
+.navbar .search i {
+  @apply w-7 h-10 flex items-center justify-center;
+}
+.navbar .settings {
+  @apply flex justify-between flex-20 items-center;
+}
+.navbar .settings i {
+  @apply text-stone-600 text-xl;
+}
+.navbar .settings .user {
+  @apply bg-violet-800 w-10 h-10 flex items-center justify-center text-white rounded-full;
+}
+.navbar .settings h3 {
+  @apply font-semibold text-xl;
+}
+.navbar .toggle-menu {
+  @apply hidden cursor-pointer;
+}
+.navbar .toggle-menu i {
+  @apply text-[25px];
+}
+@media (max-width: 767px) {
+  .navbar .nav-r {
+    @apply p-5 w-full absolute invisible flex-col bg-[#fbf9f9] top-[70px] z-30 rounded-lg gap-5 -translate-y-60 transition-all duration-300 shadow shadow-gray-300;
+  }
+  .navbar .nav-r.active {
+    @apply visible translate-y-0;
+  }
+  .navbar .toggle-menu {
+    @apply block;
+  }
+}
+/* End Navbar */
+
+/* Start Menu */
+.menu {
+  @apply flex justify-center my-7 gap-5 cursor-pointer font-semibold flex-wrap;
+}
+.menu .bolit {
+  @apply absolute top-7 left-1/2 w-3 h-3 bg-blue-500 rounded-full -translate-x-1/2 opacity-0;
+}
+.menu li {
+  @apply transition-all relative  hover:text-blue-500  text-slate-400;
+}
+.menu li.active {
+  @apply text-blue-500;
+}
+.menu li:hover .bolit,
+.menu li.active .bolit {
+  @apply opacity-100;
+}
+
+/* End Menu */
+
+/* Start Header */
+.header {
+  @apply flex bg-[#f3e7dd] rounded-2xl items-center justify-between mb-5;
+}
+.header .section-info {
+  @apply flex flex-col gap-3 items-start flex-30 pl-[35px];
+}
+.header .section-info h1 {
+  @apply text-[50px] mb-0 font-semibold text-[#a339ff];
+}
+.header .section-info p {
+  @apply text-[18px] tracking-wide text-[#777];
+}
+.header .section-info button {
+  @apply bg-[#c2a792] border-[2px] rounded-md px-[30px] py-[10px] text-white text-[18px] border-[#c2a792] transition-all;
+}
+.header .section-info button:hover {
+  @apply bg-[transparent] text-[#777];
+}
+.header .image {
+  @apply flex-70 max-w-[700px];
+}
+.header .image img {
+  @apply w-full;
+}
+@media (max-width: 1024px) {
+  .header .section-info {
+    @apply flex-auto py-7 px-4 flex flex-col justify-center items-center text-center;
+  }
+  .header .image {
+    @apply hidden;
+  }
+}
+@media (max-width: 440px) {
+  .header .section-info h1 {
+    @apply text-3xl font-extrabold;
+  }
+}
+/* End Header */
+
+/* Start Product List */
+.product-list {
+  @apply pb-14 flex flex-col gap-10;
+}
+
+.p-list {
+  @apply flex justify-between gap-4 flex-wrap;
+}
+
+.product-list .info {
+  @apply flex justify-between items-center;
+}
+.product-list .info h2 {
+  @apply font-bold text-2xl;
+}
+
+.product-list .info span {
+  @apply text-base text-gray-600;
+}
+
+@media (max-width: 468px) {
+  .p-list {
+    @apply justify-center;
+  }
+
+  .card {
+    @apply max-w-[300px];
+  }
+
+  .card .image {
+    @apply max-w-[280px] h-[400px] rounded-lg overflow-hidden;
+  }
+}
+/* End Product List */
+
+/* Start Card */
+
+.card {
+  @apply max-w-[210px];
+}
+
+.card .image {
+  @apply max-w-[200px] h-[300px] rounded-lg overflow-hidden;
+}
+.card .image img {
+  @apply w-full h-full object-cover;
+}
+.card .card-data {
+  @apply py-2;
+}
+.card .card-data span {
+  @apply text-gray-700;
+}
+.card .card-data div {
+  @apply font-bold uppercase;
+}
+.card h3 {
+  @apply text-[22px] font-bold;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 468px) {
+  .card {
+    @apply max-w-[300px];
+  }
+
+  .card .image {
+    @apply max-w-[300px] h-[400px] rounded-lg overflow-hidden;
+  }
+}
+
+/* End Card */
+
+/* Start All Books */
+.all-books {
+  @apply py-10;
+}
+.paging {
+  @apply flex justify-center gap-3 mt-5;
+}
+.paging button {
+  @apply bg-[#f3e7dd] font-semibold px-5 py-2 rounded-md hover:bg-[#fbe8d9];
+}
+/* End All Books */
